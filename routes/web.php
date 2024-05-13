@@ -9,7 +9,7 @@ use App\Http\Controllers\validar;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('inicio');
 
 Route::get('administrador', function (){
     return view('administrador');

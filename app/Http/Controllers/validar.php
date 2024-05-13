@@ -11,18 +11,32 @@ class validar extends Controller
         $clave=request('clave');
         $empleado=empleado::where('cedula','=',$cedula)->get();
         foreach($empleado as $emp)
-        {
-            if($emp->cargo =='admin' && $clave == $emp->clave)
+        {            
+         if($emp->cargo=='administrador')
             {
-                return view('administrador');
-            }
-            else
-            {
-                if($emp->cargo =='abogado' && $clave == $emp->clave){
-                    return view('empleado'); 
+                if($emp->clave==$clave)
+                {
+                    return redirect('administrador');
                 }
-                else { return back();}
+                else
+                {
+                    return back();
+                }
             }
+         else
+         {
+            if ($emp->cargo=='empleado')
+            {
+                if($emp->clave==$clave)
+                {
+                    return redirect('empleado');
+                }
+                else
+                {
+                    return back();
+                }
+            }
+         }           
         }
     }
 }
