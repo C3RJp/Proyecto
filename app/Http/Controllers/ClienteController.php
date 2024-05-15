@@ -32,14 +32,14 @@ class ClienteController extends Controller
     public function actualizarc(request $request){
 
         $cedula=request('cedula');
-        $cliente= cliente::where('cedula','=',$cedula)->first();            
-        $cliente->nombres = $request->nombreEA;
-        $cliente->apellidos = $request->apellidoEA;
-        $cliente->celular = $request->celularEA;
-        $cliente->direccion = $request->direccionEA;
-        $cliente->correo = $request->correoEA;
-        $cliente->nacionalidad = $request->nacionalidadEA;
-        $cliente->contraseña = $request->claveEA;
+        $cliente= cliente::where('cedula','=',$cedula)->first();
+        $cliente->nombres = $request->nombreCA;
+        $cliente->apellidos = $request->apellidoCA;
+        $cliente->celular = $request->celularCA;
+        $cliente->direccion = $request->direccionCA;
+        $cliente->correo = $request->correoCA;
+        $cliente->nacionalidad = $request->nacionalidadCA;
+        $cliente->contraseña = $request->claveCA;
         $cliente->update();
         return back();
     }
@@ -47,7 +47,14 @@ class ClienteController extends Controller
     public function borrarc(){
         $cedula=request('cedula');
         $empe= cliente::where('cedula','=',$cedula)->first();
-        $empe->delete();            
-        return back();
+        if ($empe)
+        {
+            $empe->delete(); 
+            return back();           
+        }
+        else
+        {
+            return back();
+        }        
     }
 }

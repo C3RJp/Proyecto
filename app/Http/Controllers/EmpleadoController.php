@@ -33,14 +33,29 @@ class EmpleadoController extends Controller
     
     public function actualizar(request $request){             
 
-        $cedula=request('cedulaEA');
-        $empe= empleado::where('cedula','=',$cedula)->first();
-        echo $empe->nombres;
+        $cedula = request('cedulaEA');        
+        $emp= empleado::where('cedula','=',$cedula)->first();
+        $emp->nombres = $request->nombreEA;
+        $emp->apellidos = $request->apellidoEA;
+        $emp->direccion = $request->direccionEA;
+        $emp->celular = $request->celularEA; 
+        $emp->correo = $request->correoEA;
+        $emp->clave = $request->claveEA;
+        $emp->update();
+        return back();
     }
     public function desactivar(){
-        $cedula=request('cedula');
+        $cedula=request('cedulaDE');
         $empe= empleado::where('cedula','=',$cedula)->first();
-        $empe->delete();            
-        return back();
+        if ($empe)
+        {
+            $empe->delete();
+            return back();
+        }
+        else
+        {
+            return back();
+        }        
+        
     }
 }

@@ -49,7 +49,14 @@ class ServiciosController extends Controller
     public function borrar(){
         $numeroServicio=request('numeroContrato');
         $servicio= servicio::where('numeroContrato','=',$numeroServicio)->first();
-        $servicio->delete();            
-        return back();
+        if($servicio)
+        {
+            $servicio->delete();            
+            return back();
+        }
+        else
+        {
+            return back();
+        }
     }
 }

@@ -25,56 +25,56 @@
                 <div class="row">
                     <div class="col-12">
                         <label for="validationDefault01" class="form-label">cedula</label>
-                        <input name="cedulaEA" type="text"class="form-control" id="validationDefault01" placeholder="<?php echo $ced; ?>" disabled>
+                        <input name="cedulaCA" type="text"class="form-control" id="validationDefault01" placeholder="<?php echo $ced; ?>" disabled>
                     </div>
                 </div>
 
                 <div class="row">
                 <div class="col-12">
                     <label for="validationDefault02" class="form-label">Nombres</label>
-                    <input name="nombreEA" type="text"class="form-control" id="validationDefault02" placeholder="" required>
+                    <input name="nombreCA" type="text"class="form-control" id="validationDefault02" placeholder="" required>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-12">
                     <label for="validationDefault03" class="form-label">Apellidos</label>
-                    <input name="apellidoEA" type="text"class="form-control" id="validationDefault03" placeholder="" required>
+                    <input name="apellidoCA" type="text"class="form-control" id="validationDefault03" placeholder="" required>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-12">
                     <label for="validationDefault05" class="form-label">Celular</label>
-                    <input name="celularEA" type="number" min="0" class="form-control" id="validationDefault05" placeholder="" required>
+                    <input name="celularCA" type="number" min="0" class="form-control" id="validationDefault05" placeholder="" required>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-12">
                     <label for="validationDefault04" class="form-label">Dirección</label>
-                    <input name="direccionEA" type="text" class="form-control" id="validationDefault04" placeholder="" required>
+                    <input name="direccionCA" type="text" class="form-control" id="validationDefault04" placeholder="" required>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-12">
                     <label for="validationDefault06" class="form-label">Correo</label>
-                    <input name="correoEA" type="text" class="form-control" id="validationDefault06" placeholder="" required>
+                    <input name="correoCA" type="text" class="form-control" id="validationDefault06" placeholder="" required>
                 </div>
                 </div>
 
                 <div class="row">
                 <div class="col-12">
                     <label for="validationDefault07" class="form-label">Nacionalidad</label>
-                    <input name="nacionalidadEA" type="text" class="form-control" id="validationDefault07" placeholder="" required>
+                    <input name="nacionalidadCA" type="text" class="form-control" id="validationDefault07" placeholder="" required>
                 </div>
                 </div>
 
                 <div class="row pt-3">
                 <div class="col-12">
                     <label for="validationDefault08" class="form-label ">Contraseña</label>
-                    <input name="claveEA" type="text"class="form-control" id="validationDefault08" placeholder="" required>
+                    <input name="claveCA" type="text"class="form-control" id="validationDefault08" placeholder="" required>
                 </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('numeroContrato');
             $table->boolean('activo')->default(1);
-            $table->boolean('mora')->default(1);
+            $table->boolean('mora')->default(0);
             $table->integer('cedulaEmpleado');
             $table->integer('cedulaCliente');            
             $table->integer('diasMora')->default(0);

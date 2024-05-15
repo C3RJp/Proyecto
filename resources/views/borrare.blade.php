@@ -7,13 +7,16 @@
     <title>DesactivarEmpleado</title>
 </head>
 <body>
-    <form class="form mt-3 text-center" action="" method="post">
+    <form class="form mt-3 text-center" action="{{route('desE')}}" method="post">
         <div class="w-100 mb-3">
         @csrf
-            <input type="search" name="cedula" >
-            <br>
-            <br>
-            <input class="btn btn-dark" type="submit" value="Borrar">
+            <div>                
+                <input  type="search" name="cedulaDE">                
+            </div>
+
+            <div class="mt-3" >
+                <input class="btn btn-dark" type="submit" value="Borrar">
+            </div>
         </div>
     </form>
 </body>

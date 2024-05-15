@@ -12,22 +12,22 @@
 
                 <div class="row">
                     <div class="col-12">
-                      <label for="validationDefault08" class="form-label">Numero De Contrato</label>
-                      <input type="number" min="0" class="form-control" id="validationDefault08" name="numContrato" required>
+                      <label for="validationDefault01" class="form-label">Numero De Contrato</label>
+                      <input type="number" min="0" class="form-control" id="validationDefault01" name="numContrato" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                      <label for="validationDefault07" class="form-label">Cedula De Abogado</label>
-                      <input type="number" min="0" class="form-control" id="validationDefault07" name="cedulaAbogado" required>
+                      <label for="validationDefault02" class="form-label">Cedula De Abogado</label>
+                      <input type="number" min="0" class="form-control" id="validationDefault02" name="cedulaAbogado" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-12">
-                      <label for="validationDefault08" class="form-label">Cedula De Cliente</label>
-                      <input type="number" min="0" class="form-control" id="validationDefault08" name="CedulaCliente" required>
+                      <label for="validationDefault03" class="form-label">Cedula De Cliente</label>
+                      <input type="number" min="0" class="form-control" id="validationDefault03" name="CedulaCliente" required>
                     </div>
                 </div>
 
@@ -35,36 +35,36 @@
 
                   <div class="row">
                     <div class="col-12">
-                      <label for="validationDefault02" class="form-label">Numero De Cuotas</label>
-                      <input type="number" min="0" class="form-control" id="validationDefault02" Name="numCuotas" required>
+                      <label for="validationDefault04" class="form-label">Numero De Cuotas</label>
+                      <input type="number" min="1" class="form-control" id="validationDefault04" Name="numCuotas" required>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-12">
-                      <label for="validationDefault03" class="form-label">Adicionales</label>
-                      <input type="text" class="form-control" id="validationDefault03" Name="adicionales" required>
+                      <label for="validationDefault05" class="form-label">Adicionales</label>
+                      <input type="text" class="form-control" id="validationDefault05" Name="adicionales" required>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-12">
-                      <label for="validationDefault04" class="form-label">Valor Adicional</label>
-                      <input type="number" class="form-control" id="validationDefault04" Name="valorAdicional" required>
+                      <label for="validationDefault06" class="form-label">Valor Adicional</label>
+                      <input type="number" class="form-control" id="validationDefault06" Name="valorAdicional" required>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-12">
-                      <label for="validationDefault05" class="form-label">Valor De Contrato</label>
-                      <input type="number" class="form-control" id="validationDefault05" Name="valorContrato" required>
+                      <label for="validationDefault07" class="form-label">Valor De Contrato</label>
+                      <input type="number" class="form-control" id="validationDefault07" Name="valorContrato" required>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-12">
-                      <label for="validationDefault06" class="form-label">Valor De Cuota Inicial</label>
-                      <input type="number" class="form-control" id="validationDefault06" Name="valorCuotaI" required>
+                      <label for="validationDefault08" class="form-label">Valor De Cuota Inicial</label>
+                      <input type="number" class="form-control" id="validationDefault08" Name="valorCuotaI" required>
                     </div>
                   </div>
 
