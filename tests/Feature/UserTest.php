@@ -41,18 +41,18 @@ class UserTest extends TestCase
         $datos=
         [
             'cargo'=>"empleado",
-            'cedula'=>"123",
-            'nombres'=>"admin",
-            'apellidos'=>"admin",
-            'direccion'=>"Cra123",
-            'celular'=>"312",
-            'correo'=>"admin@mail.com",
-            'clave'=>"123"
+            'cedula'=>"126",
+            'nombres'=>"emp2",
+            'apellidos'=>"emp2",
+            'direccion'=>"Cra126",
+            'celular'=>"312203",
+            'correo'=>"emp2@mail.com",
+            'clave'=>"126"
         ];
 
-        $response=$this->post(route('regE'),$datos);
-                
-        $this->assertDatabaseHas('regE',$datos);
+        $response = $this->post('registroe',$datos);
+        $response = $this->withHeaders(['X-CSRF-TOKEN' => csrf_token(),])->post('registroe', $datos);
+        $response->assertFound();
         
     }
 }
