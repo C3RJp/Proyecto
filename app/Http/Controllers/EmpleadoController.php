@@ -28,21 +28,30 @@ class EmpleadoController extends Controller
         $ced=request('cedulaEmpleado');
         $empleados = empleado::paginate('10');            
         $empleadoEspecifico= empleado::where('cedula','=',$ced)->get();
-        return view('consultae', compact('empleadoEspecifico','empleados'));
+        return view('consultae', compact('empleadoEspecifico','empleados'));     
     }  
     
     public function actualizar(request $request){             
 
         $cedula = request('cedulaEA');        
-        $emp= empleado::where('cedula','=',$cedula)->first();
-        $emp->nombres = $request->nombreEA;
-        $emp->apellidos = $request->apellidoEA;
-        $emp->direccion = $request->direccionEA;
-        $emp->celular = $request->celularEA; 
-        $emp->correo = $request->correoEA;
-        $emp->clave = $request->claveEA;
-        $emp->update();
-        return back();
+        $emp= empleado::where('cedula','=',$cedula)->exists();
+        
+        if($emp)
+        {
+            $emp= empleado::where('cedula','=',$cedula)->first();
+            $emp->nombres = $request->nombreEA;
+            $emp->apellidos = $request->apellidoEA;
+            $emp->direccion = $request->direccionEA;
+            $emp->celular = $request->celularEA; 
+            $emp->correo = $request->correoEA;
+            $emp->clave = $request->claveEA;
+            $emp->update();
+            return back();
+        }
+        else
+        {
+            return back();
+        }
     }
     public function desactivar(){
         $cedula=request('cedulaDE');

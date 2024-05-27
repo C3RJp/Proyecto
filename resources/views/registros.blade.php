@@ -10,14 +10,7 @@
     <form action="{{route('regS')}}" method="post" class="text-center">
                 @csrf
 
-                <div class="row">
-                    <div class="col-12">
-                      <label for="validationDefault01" class="form-label">Numero De Contrato</label>
-                      <input type="number" min="0" class="form-control" id="validationDefault01" name="numContrato" required>
-                    </div>
-                </div>
-
-                <div class="row">
+                <div class="row pt-3">
                     <div class="col-12">
                       <label for="validationDefault02" class="form-label">Cedula De Abogado</label>
                       <input type="number" min="0" class="form-control" id="validationDefault02" name="cedulaAbogado" required>
@@ -43,14 +36,17 @@
                   <div class="row">
                     <div class="col-12">
                       <label for="validationDefault05" class="form-label">Adicionales</label>
-                      <input type="text" class="form-control" id="validationDefault05" Name="adicionales" required>
+                      <select class="form-select " aria-label="Default select example" name="adicionales" >
+                        <option value="0" selected>No</option>
+                        <option value="1">Si</option>                        
+                      </select>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-12">
                       <label for="validationDefault06" class="form-label">Valor Adicional</label>
-                      <input type="number" class="form-control" id="validationDefault06" Name="valorAdicional" required>
+                      <input type="number" min="0" class="form-control" id="validationDefault06" Name="valorAdicional"  required>
                     </div>
                   </div>
 

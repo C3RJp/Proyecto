@@ -61,8 +61,11 @@
             <div class="row">
                 <div class="col-12">
                     <label for="validationDefault06" class="form-label">Adicionales</label>
-                    <input name="adicionales" type="Text" class="form-control" id="validationDefault06">
-                </div>
+                    <select class="form-select" aria-label="Default select example" name="adicionales" >
+                        <option value="0" selected>Sin Adicionales</option>
+                        <option value="1">Con Adicionales</option>                        
+                    </select>
+                </div>                
             </div>
 
             

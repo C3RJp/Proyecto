@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class ClienteController extends Controller
 {
     public function registroc(request $request){
-        $cliente = new cliente();        
         
+        $cliente = new cliente();        
         $cliente->cedula = $request->cedulaC;
         $cliente->nombres = $request->nombreC;
         $cliente->apellidos = $request->apellidoC;        
@@ -17,7 +17,7 @@ class ClienteController extends Controller
         $cliente->celular = $request->celularC;
         $cliente->correo = $request->correoC;
         $cliente->nacionalidad = $request->nacionalidad;
-        $cliente->contraseña = $request->claveC;
+        $cliente->clave = $request->claveC;
         $cliente->save();
         return back(); 
     }
@@ -32,16 +32,25 @@ class ClienteController extends Controller
     public function actualizarc(request $request){
 
         $cedula=request('cedula');
-        $cliente= cliente::where('cedula','=',$cedula)->first();
-        $cliente->nombres = $request->nombreCA;
-        $cliente->apellidos = $request->apellidoCA;
-        $cliente->celular = $request->celularCA;
-        $cliente->direccion = $request->direccionCA;
-        $cliente->correo = $request->correoCA;
-        $cliente->nacionalidad = $request->nacionalidadCA;
-        $cliente->contraseña = $request->claveCA;
-        $cliente->update();
-        return back();
+        $cliente= cliente::where('cedula','=',$cedula)->exists();
+
+        if($cliente)
+        {
+            $cliente= cliente::where('cedula','=',$cedula)->first();
+            $cliente->nombres = $request->nombreCA;
+            $cliente->apellidos = $request->apellidoCA;
+            $cliente->celular = $request->celularCA;
+            $cliente->direccion = $request->direccionCA;
+            $cliente->correo = $request->correoCA;
+            $cliente->nacionalidad = $request->nacionalidadCA;
+            $cliente->clave = $request->claveCA;
+            $cliente->update();
+            return back();
+        }
+        else
+        {
+            return back();
+        }
     }
 
     public function borrarc(){

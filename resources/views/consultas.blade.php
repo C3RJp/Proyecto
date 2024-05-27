@@ -19,6 +19,7 @@
             <thead class="table-dark">
                 <tr>
                     <th>Numero De Contrato</th>    
+                    <th>Activo</th>
                     <th>Cedula Abogado</th>
                     <th>Cedula Cliente</th>                    
                     <th>Numero De Cuotas</th>
@@ -33,7 +34,8 @@
                 
             @foreach($servicio as $se)
                     <tr>
-                        <td>{{$se->numeroContrato}}</td>    
+                        <td>{{$se->id}}</td>
+                        <td>{{$se->activo}}</td>    
                         <td>{{$se->cedulaEmpleado}}</td>
                         <td>{{$se->cedulaCliente}}</td>                        
                         <td>{{$se->numeroCuotas}}</td>
@@ -46,7 +48,8 @@
 
                 @foreach($servicios as $serv)
                 <tr>
-                        <td>{{$serv->numeroContrato}}</td>        
+                        <td>{{$serv->id}}</td> 
+                        <td>{{$serv->activo}}</td>           
                         <td>{{$serv->cedulaEmpleado}}</td>
                         <td>{{$serv->cedulaCliente}}</td>                        
                         <td>{{$serv->numeroCuotas}}</td>

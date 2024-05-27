@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-12">
                       <label for="validationDefault01" class="form-label">Cédula</label>
-                      <input type="number" min="0" class="form-control" id="validationDefault01" name="cedula" required>
+                      <input type="number" min="0" max="9999999999" class="form-control" id="validationDefault01" name="cedula" required>
                     </div>
 
                   </div>
@@ -34,7 +34,7 @@
                   <div class="row">
                     <div class="col-12">
                       <label for="validationDefault04" class="form-label">Celular</label>
-                      <input type="number" min="0" class="form-control" id="validationDefault04" Name="celular" required>
+                      <input type="number" min="0" max="9999999999" class="form-control" id="validationDefault04" Name="celular" required>
                     </div>
                   </div>
 

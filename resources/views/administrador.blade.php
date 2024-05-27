@@ -92,6 +92,10 @@
                         <label class="btn btn-outline-dark" for="vbtn-radio9">Registrar Servicios</label>
                         <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio10" autocomplete="off" onclick="boton10()">
                         <label class="btn btn-outline-dark" for="vbtn-radio10">Consulta Servicios</label>
+                        
+                        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio13" autocomplete="off" onclick="boton13()">
+                        <label class="btn btn-outline-dark" for="vbtn-radio13">Consulta Facturas</label>
+
                         <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio11" autocomplete="off" onclick="boton11()">
                         <label class="btn btn-outline-dark" for="vbtn-radio11">Actualizar Servicios</label>
                         <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio12" autocomplete="off" onclick="boton12()">
@@ -110,7 +114,7 @@
             <!-- Formularios Empleados -->
             <div class="card-body" id="fre" style="display: none;">
               <div class="w-100 mb-3" >
-                <iframe frameborder="0" width="600" height="600" src="{{url('registroe')}}" >
+                <iframe frameborder="1" width="600" height="800" src="{{url('registroe')}}" >
 
                 </iframe>                
               </div>
@@ -118,7 +122,7 @@
 
             <div class="card pt-2" id="fce" style="display: none;">
               <div class="w-100 mb-3">
-                <iframe frameborder="1" width="600" height="500" src="{{url('consultae')}}" >
+                <iframe frameborder="1" width="850" height="600" src="{{url('consultae')}}" >
 
                 </iframe>
               </div>
@@ -126,7 +130,7 @@
             
             <div class="card" id="fae" style="display: none;">
               <div class="w-100 mb-3">
-                <iframe frameborder="1" width="600" height="500" src="{{url('actualizacione')}}" >
+                <iframe frameborder="1" width="850" height="650" src="{{url('actualizacione')}}" >
 
                 </iframe>
               </div>
@@ -134,7 +138,7 @@
 
             <div class="card" id="fde" style="display: none;">
               <div class="w-100 mb-3">
-                  <iframe frameborder="1" width="600" height="140" src="{{url('borrare')}}" >
+                  <iframe frameborder="1" width="600" height="400" src="{{url('borrare')}}" >
 
                   </iframe>
               </div>  
@@ -144,7 +148,7 @@
             <!-- Formularios Clientes -->
           <div class="card" id="frc" style="display: none;">
             <div class="w-100 mb-3">
-              <iframe frameborder="1" width="600" height="500" src="{{url('registroc')}}">
+              <iframe frameborder="1" width="850" height="700" src="{{url('registroc')}}">
 
               </iframe>
             </div>
@@ -152,7 +156,7 @@
 
           <div class="card" id="fcc" style="display: none;">
             <div class="w-100 mb-3">
-              <iframe frameborder="1" width="600" height="500" src="{{url('consultac')}}">
+              <iframe frameborder="1" width="850" height="600" src="{{url('consultac')}}">
 
               </iframe>
             </div>
@@ -160,7 +164,7 @@
             
           <div class="card" id="fac" style="display: none;">
             <div class="w-100 mb-3">
-              <iframe frameborder="1" width="600" height="500" src="{{url('actualizacionc')}}">
+              <iframe frameborder="1" width="850" height="700" src="{{url('actualizacionc')}}">
 
               </iframe>
             </div>              
@@ -168,7 +172,7 @@
           
           <div class="card" id="fdc" style="display: none;">
             <div class="w-100 mb-3">
-              <iframe frameborder="1" width="600" height="140" src="{{url('borrarc')}}">
+              <iframe frameborder="1" width="600" height="400" src="{{url('borrarc')}}">
 
               </iframe>
             </div>              
@@ -177,15 +181,23 @@
             <!-- Formularios Servicios -->
             <div class="card" id="frs" style="display: none;">
               <div class="w-100 mb-3">
-                <iframe frameborder="1" width="600" height="500" src="{{url('registros')}}">
-
+                <iframe frameborder="1" width="600" height="650" src="{{url('registros')}}">
+                    
                 </iframe>
               </div>     
             </div>
 
             <div class="card" id="fcs" style="display: none;">
               <div class="w-100 mb-3">
-                <iframe frameborder="1" width="800" height="500" src="{{url('consultas')}}">
+                <iframe frameborder="1" width="850" height="600" src="{{url('consultas')}}">
+
+                </iframe>
+              </div>
+            </div>
+
+            <div class="card" id="fcf" style="display: none;">
+              <div class="w-100 mb-3">
+                <iframe frameborder="1" width="850" height="600" src="{{url('consultaf')}}">
 
                 </iframe>
               </div>
@@ -193,7 +205,7 @@
 
             <div class="card" id="fas" style="display:none;">
               <div class="w-100 mb-3">
-                <iframe frameborder="1" width="800" height="500" src="{{url('actualizacions')}}">
+                <iframe frameborder="1" width="850" height="750" src="{{url('actualizacions')}}">
 
                 </iframe>
               </div>
@@ -201,7 +213,7 @@
 
             <div class="card" id="fds" style="display:none;">
               <div class="w-100 mb-3">
-                  <iframe frameborder="1" width="800" height="500" src="{{url('borrars')}}">
+                  <iframe frameborder="1" width="600" height="400" src="{{url('borrars')}}">
 
                   </iframe>
               </div>    
@@ -297,6 +309,7 @@
         document.getElementById('fcs').style.display='none';
         document.getElementById('fas').style.display='none';
         document.getElementById('fds').style.display='none';
+        document.getElementById('fcf').style.display='none';
       }
       function boton10(){
         limpiare();
@@ -305,6 +318,7 @@
         document.getElementById('fcs').style.display='flex';
         document.getElementById('fas').style.display='none';
         document.getElementById('fds').style.display='none';
+        document.getElementById('fcf').style.display='none';
       }
       function boton11(){
         limpiare();
@@ -313,6 +327,7 @@
         document.getElementById('fcs').style.display='none';
         document.getElementById('fas').style.display='flex';
         document.getElementById('fds').style.display='none';
+        document.getElementById('fcf').style.display='none';
       }
       function boton12(){
         limpiare();
@@ -321,6 +336,16 @@
         document.getElementById('fcs').style.display='none';
         document.getElementById('fas').style.display='none';
         document.getElementById('fds').style.display='flex';
+        document.getElementById('fcf').style.display='none';
+      }
+      function boton13(){
+        limpiare();
+        limpiarc();
+        document.getElementById('frs').style.display='none';
+        document.getElementById('fcs').style.display='none';
+        document.getElementById('fas').style.display='none';
+        document.getElementById('fds').style.display='none';
+        document.getElementById('fcf').style.display='flex';
       }
       
       // botones de limpieza generales
@@ -329,18 +354,21 @@
         document.getElementById('fce').style.display='none';
         document.getElementById('fae').style.display='none';
         document.getElementById('fde').style.display='none';
+        document.getElementById('fcf').style.display='none';
       }
       function limpiarc(){
         document.getElementById('frc').style.display='none';
         document.getElementById('fcc').style.display='none';
         document.getElementById('fac').style.display='none';
         document.getElementById('fdc').style.display='none';
+        document.getElementById('fcf').style.display='none';
       }
       function limpiars(){
         document.getElementById('frs').style.display='none';
         document.getElementById('fcs').style.display='none';
         document.getElementById('fas').style.display='none';
         document.getElementById('fds').style.display='none';
+        document.getElementById('fcf').style.display='none';
       }  
       function botonc(){
         limpiarc();
@@ -349,6 +377,7 @@
         document.getElementById('fce').style.display='flex';
         document.getElementById('fae').style.display='none';
         document.getElementById('fde').style.display='none';
+        document.getElementById('fcf').style.display='none';
       }    
     </script>
 

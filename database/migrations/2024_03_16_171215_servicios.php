@@ -12,15 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('servicios', function(Blueprint $table){
-            $table->id();
-            $table->integer('numeroContrato');
+            $table->id();            
             $table->boolean('activo')->default(1);
             $table->boolean('mora')->default(0);
             $table->integer('cedulaEmpleado');
             $table->integer('cedulaCliente');            
             $table->integer('diasMora')->default(0);
             $table->integer('numeroCuotas');
-            $table->string('adicionales');
+            $table->boolean('adicionales');
             $table->integer('valorAdicional');
             $table->integer('valorContrato');            
             $table->integer('valorCuotaInicial');

@@ -11,7 +11,7 @@
         <div class="w-100 mb-3">        
             <input type="search" name="cedula" > 
             <br><br>                       
-            <input class="btn btn-dark mt-3" type="submit" value="Desactivar">
+            <input class="btn btn-dark mt-2" type="submit" value="Desactivar">
         </div>
         @csrf
     </form>

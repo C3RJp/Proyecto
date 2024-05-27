@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\FacturaController;
 use App\Http\Controllers\ServiciosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\validar;
@@ -18,6 +19,8 @@ Route::get('administrador', function (){
 Route::get('empleado', function (){
     return view('empleado');
 } );
+
+Route::get('cliente', function (){ return view('cliente'); });
 
 // gestionEmpleados
 route::get('registroe',function(){
@@ -62,7 +65,13 @@ route::get('borrars', function (){
     return view('borrars');
 });
 
+// Gestion Pagos
+Route::get('registrofacturas', function (){ return view('registrofacturas'); });
+Route::get('consultasc', [ServiciosController::class, 'consultasc']);
 
+Route::get('consultaf', [FacturaController::class, 'consultaf']);
+
+//validar
 Route::post('/', [validar::class, 'validar'])->name('valid');
 
 // Formularios
@@ -80,3 +89,8 @@ route::Post('registros',[ServiciosController::class,'registrar'])->name('regS');
 route::Post('consultas',[ServiciosController::class,'consultars'])->name('conS');
 route::Post('actualizacions',[ServiciosController::class,'actualizar'])->name('actS');
 route::Post('borrars',[ServiciosController::class,'borrar'])->name('desS');
+
+route::Post('consultasc',[ServiciosController::class,'consultasc'])->name('conSC');
+route::Post('registrofacturas',[FacturaController::class,'registrof'])->name('regF');
+
+route::Post('consultaf',[FacturaController::class,'consultaf'])->name('consF');
