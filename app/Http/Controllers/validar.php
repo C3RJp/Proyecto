@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class validar extends Controller
 {    
-    public function validar(){
+    public function validar()
+    {
         $cedula=request('cedula');        
         $clave=request('clave');
         $empleado=empleado::where('cedula','=',$cedula)->get();
@@ -48,6 +49,6 @@ class validar extends Controller
             {
                 return back();
             }  
-        }        
+        }
     }
 }

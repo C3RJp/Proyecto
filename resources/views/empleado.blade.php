@@ -27,11 +27,10 @@
     </nav>
 </header>
 
-<main>
-<div class="container-fluid d-flex justify-content-center pt-3">
-    <div class="col bg-transparent ">
-
-        <div class="accordion accordion-flush  " id="accordionFlushExample">
+<main class="container-fluid mt-5">
+<div class="w-auto bg-transparent" id="formularios">
+    <div class="w-100 border border-black ">
+    <div class="accordion accordion-flush  " id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-body-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -39,7 +38,6 @@
                     </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    
                     <div class="btn-group-vertical w-100" role="group" aria-label="Vertical radio toggle button group">
                     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" onclick="boton()">
                     <label class="btn btn-outline-dark" for="vbtn-radio1">Registrar Clientes</label>
@@ -50,7 +48,6 @@
                     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off" onclick="boton3()">
                     <label class="btn btn-outline-dark"  for="vbtn-radio4">Desactivar Clientes</label>
                     </div>
-                
                 </div>
             </div>
 
@@ -82,72 +79,44 @@
         </div>
 
     </div>
-<!-- Formularios -->
-    <div class="col-8 bg-transparent" >
-    <div class="container-fluid  m-auto" >
-<!-- Clientes -->
-        <div class="card" id="efrc" style="display: none">
-            <div class="w-100 mb-3">
-                <iframe frameborder="1" width="850" height="700" src="{{url('registroc')}}"></iframe>
-            </div>  
+    <div class="w-100 border border-black mt-2">
+    <!-- Clientes -->
+        <div class="w-100" id="efrc" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('registroc')}}"></iframe>
         </div>
-        
-        <div class="card" id="efcc" style="display: none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="900" height="600" src="{{url('consultac')}}"></iframe>
+        <div class="w-100" id="efcc" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('consultac')}}"></iframe>
         </div>
+        <div class="w-100" id="efac" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('actualizacionc')}}"></iframe>
         </div>
-
-        <div class="card" id="efac" style="display: none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="850" height="700" src="{{url('actualizacionc')}}"></iframe>
-        </div>              
+        <div class="w-100" id="efdc" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('borrarc')}}"></iframe>
         </div>
-          
-        <div class="card" id="efdc" style="display: none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="800" height="400" src="{{url('borrarc')}}"></iframe>
-        </div>              
+    <!-- Servicios -->
+        <div class="w-100" id="efrs" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('registros')}}"></iframe>
         </div>
-<!-- Servicios -->
-        <div class="card" id="efrs" style="display: none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="850" height="650" src="{{url('registros')}}"></iframe>
-        </div>     
+        <div class="w-100" id="efcs" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('consultas')}}"></iframe>
         </div>
-
-        <div class="card" id="efcs" style="display: none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="900" height="600" src="{{url('consultas')}}"></iframe>
+        <div class="w-100" id="efcf" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('consultaf')}}"></iframe>
         </div>
+        <div class="w-100" id="efas" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('actualizacions')}}"></iframe>
         </div>
-
-        <div class="card" id="efcf" style="display: none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="900" height="600" src="{{url('consultaf')}}"></iframe>
+        <div class="w-100" id="efds" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('borrars')}}"></iframe>
         </div>
-        </div>
-
-        <div class="card" id="efas" style="display:none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="850" height="750" src="{{url('actualizacions')}}"></iframe>
-        </div>
-        </div>
-
-        <div class="card" id="efds" style="display:none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="850" height="400" src="{{url('borrars')}}"></iframe>
-        </div>    
-        </div>
-
-    </div>
+        <!-- limite -->
     </div>
 </div>
 </main>
 
 <footer>
-    <nav class="navbar sticky-bottom bg-transparent">
-        <div class="container-fluid justify-content-end">
+    <nav class="navbar fixed-bottom bg-transparent">
+        <div class="container-fluid fluid-content-end">
             <a class="navbar-brand " href="#">Copy Right ©</a>
         </div>
     </nav>
@@ -156,7 +125,16 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<script>      
+<script> 
+  let navegador = navigator.userAgent;
+    if (window.innerWidth <= 768) {
+        
+        document.getElementById('formularios').style.display='block';
+    }
+    else
+    {
+        document.getElementById('formularios').style.display='flex';
+    }     
       // botones de gestion clientes
       function boton(){         
         limpiars();  

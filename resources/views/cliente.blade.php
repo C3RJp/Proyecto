@@ -28,11 +28,9 @@
 </header>
 
 <main>
-<div class="container-fluid d-flex justify-content-center pt-3">
-    <div class="col bg-transparent ">
-
+<div class="w-auto bg-transparent" id="formularios">
+    <div class="w-100 border border-black ">
         <div class="accordion accordion-flush  " id="accordionFlushExample">
-            
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-body-secondary " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -40,37 +38,24 @@
                     </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-
                     <div class="btn-group-vertical w-100" role="group" aria-label="Vertical radio toggle button group">
                     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio7" autocomplete="off" onclick="boton1()">
                     <label class="btn btn-outline-dark" for="vbtn-radio7">Registro Pago</label>
                     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio6" autocomplete="off" onclick="boton()">
                     <label class="btn btn-outline-dark" for="vbtn-radio6">Consulta Servicios</label>
                     </div>
-
                 </div>
             </div>
-
-        </div>
-
+        </div>        
     </div>
-<!-- Formularios -->
-    <div class="col-8 bg-transparent" >
-    <div class="container-fluid  m-auto" >
-<!-- Servicios -->
-        <div class="card" id="cfcs" style="display: none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="900" height="600" src="{{Url('consultasc')}}"></iframe>
-        </div>
-        </div>
 
-        <div class="card" id="cfas" style="display:none">
-        <div class="w-100 mb-3">
-            <iframe frameborder="1" width="850" height="750" src="{{Url('registrofacturas')}}"></iframe>
+    <div class="w-100 mt-2">
+        <div class="w-100" id="cfcs" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('consultasc')}}"></iframe>
         </div>
+        <div class="w-100" id="cfas" style="display: none">
+            <iframe frameborder="0" width="850" height="500" src="{{url('registrofacturas')}}"></iframe>
         </div>
-
-    </div>
     </div>
 </div>
 </main>
@@ -87,8 +72,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <script>      
-      // botones de gestion clientes
-     
+  let navegador = navigator.userAgent;
+    if (window.innerWidth <= 768) {
+        
+        document.getElementById('formularios').style.display='block';
+    }
+    else
+    {
+        document.getElementById('formularios').style.display='flex';
+    } 
+      // botones de gestion clientes     
       function boton()
       {         
         document.getElementById('cfcs').style.display='flex';
