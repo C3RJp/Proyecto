@@ -29,7 +29,7 @@
 
 <main class="container-fluid mt-5">
 <div class="w-auto bg-transparent" id="formularios">
-    <div class="w-100 border border-black ">
+    <div class="w-100">
     <div class="accordion accordion-flush  " id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -79,7 +79,7 @@
         </div>
 
     </div>
-    <div class="w-100 border border-black mt-2">
+    <div class="w-100 mt-2">
     <!-- Clientes -->
         <div class="w-100" id="efrc" style="display: none">
             <iframe frameborder="0" width="850" height="500" src="{{url('registroc')}}"></iframe>
