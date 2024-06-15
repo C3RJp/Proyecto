@@ -49,8 +49,34 @@ class ClienteController extends Controller
         }
         else
         {
-            return back();
+            $cliente=cliente::where('cedula','=',0)->get();
+            return view('actualizacionc', compact('cliente'));
         }
+    }
+
+    public function ccli(Request $request)
+    {
+        $cedula=request('cedula');
+        
+        if($cedula)
+        {
+            $validar=cliente::where('cedula','=',$cedula)->exists();
+            if($validar)
+            {
+                $cliente=cliente::where('cedula','=',$cedula)->get();
+                return view('actualizacionc', compact('cliente'));
+            }
+            else
+            {
+                $cliente=cliente::where('cedula','=',0)->get();
+                return view('actualizacionc', compact('cliente'));    
+            }         
+        }
+        else
+        {
+            $cliente=cliente::where('cedula','=',0)->get();
+            return view('actualizacionc', compact('cliente'));
+        }       
     }
 
     public function borrarc(){

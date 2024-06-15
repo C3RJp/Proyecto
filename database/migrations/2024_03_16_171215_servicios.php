@@ -17,9 +17,9 @@ return new class extends Migration
             $table->boolean('mora')->default(0);
             $table->integer('cedulaEmpleado');
             $table->integer('cedulaCliente');            
-            $table->integer('diasMora')->default(0);
+            $table->integer('diasMora');
             $table->integer('numeroCuotas');
-            $table->boolean('adicionales');
+            $table->boolean('adicionales')->default(0);
             $table->integer('valorAdicional');
             $table->integer('valorContrato');            
             $table->integer('valorCuotaInicial');

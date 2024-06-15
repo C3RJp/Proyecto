@@ -18,7 +18,7 @@
 
                 <div class="justify-content-end">
                     <div class="btn ">
-                        <a class="text-decoration-none text-black" href="">Contactenos</a>
+                        <a class="text-decoration-none text-black" href="contactenos">Contactenos</a>
                     </div>
                     <div class="btn ">
                         <a class="text-decoration-none text-black" href="/">Salir</a>

@@ -28,6 +28,7 @@ class ServiciosController extends Controller
         $servicio = servicio::where('id','=',$numContraro)->get();
         return view('consultas', compact('servicios','servicio'));
     }
+
     public function consultasc()
     {    
         $cedulac=request('cedula');
@@ -46,27 +47,45 @@ class ServiciosController extends Controller
         
     }    
 
-    public function actualizar(request $request){        
-        $numContrato =request('nContrato');
-        $servicio= servicio::where('id','=',$numContrato)->exists();
-        if($servicio)
+    public function cser(Request $request)
+    {
+        $numero=request('numero');
+        $validar=servicio::where('id','=',$numero)->exists();
+        if($validar)
         {
-            $servicio= servicio::where('id','=',$numContrato)->first();
-            $servicio->activo=$request->activo;
-            $servicio->mora=$request->mora;
-            $servicio->diasMora=$request->diasMora;
-            $servicio->numeroCuotas=$request->numeroCuotas;
-            $servicio->adicionales=$request->adicionales;
-            $servicio->valorAdicional=$request->valorAdicional;
-            $servicio->valorContrato=$request->valorContrato;
-            $servicio->valorCuotaInicial=$request->valorCuotaInicial;
-            $servicio->update();
-            return back();
+            $servicios=servicio::where('id','=',$numero)->get();
+            return view('actualizacions',compact('servicios'));
         }
         else
         {
+            $servicios=servicio::where('id','=',1)->get();
+            return view('actualizacions',compact('servicios'));
+        }        
+    }
+
+    public function actualizar(request $request)
+    {
+        $numContrato =request('numero');
+        $validar= servicio::where('id','=',$numContrato)->exists();
+        if($validar)
+        {
+            $servicios= servicio::where('id','=',$numContrato)->first();
+            $servicios->activo=$request->activo;
+            $servicios->mora=$request->mora;
+            $servicios->diasMora=$request->diasm;
+            $servicios->numeroCuotas=$request->numeroCuotas;
+            $servicios->adicionales=$request->adicionales;
+            $servicios->valorAdicional=$request->valorAdicional;
+            $servicios->valorContrato=$request->valorContrato;
+            $servicios->valorCuotaInicial=$request->valorCuotaInicial;
+            $servicios->update();
+            return back();            
+        }
+        else
+        {
+            $servicios= servicio::where('id','=',1)->get();
             return back();
-        }    
+        } 
     }
 
     public function borrar(){

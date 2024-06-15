@@ -14,14 +14,14 @@
 
                 <div class="row d-flex col-8 m-auto " >
                     <div class="input-group m-1">
-                        <span class="input-group-text bg-dark text-light ">Número de cédula</span>
+                        <span class="input-group-text bg-dark text-light ">Cédula de abogado</span>
                         <input type="number" name="cedula" min="0" max="9999999999" class="form-control" placeholder="Número de cédula">
                     </div>
                 </div>
 
                 <div class="row d-flex col-8 m-auto " >
                     <div class="input-group m-1">
-                        <span class="input-group-text bg-dark text-light">Número de contrato</span>
+                        <span class="input-group-text bg-dark text-light">Número de servicio</span>
                         <input type="number" name="numeroContrato" min="0" max="9999999999" class="form-control" placeholder="Número de contrato">
                     </div>
                 </div>

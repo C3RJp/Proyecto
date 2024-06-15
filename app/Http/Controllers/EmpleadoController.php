@@ -31,28 +31,53 @@ class EmpleadoController extends Controller
         return view('consultae', compact('empleadoEspecifico','empleados'));     
     }  
     
-    public function actualizar(request $request){             
+    public function actualizar(request $request){
+        $cedula=request('cedula');
+        $empleado= empleado::where('cedula','=',$cedula)->exists();        
 
-        $cedula = request('cedulaEA');        
-        $emp= empleado::where('cedula','=',$cedula)->exists();
-        
-        if($emp)
+        if($empleado)
         {
-            $emp= empleado::where('cedula','=',$cedula)->first();
-            $emp->nombres = $request->nombreEA;
-            $emp->apellidos = $request->apellidoEA;
-            $emp->direccion = $request->direccionEA;
-            $emp->celular = $request->celularEA; 
-            $emp->correo = $request->correoEA;
-            $emp->clave = $request->claveEA;
-            $emp->update();
+            $empleado= empleado::where('cedula','=',$cedula)->first();
+            $empleado->nombres = $request->nombreEA;
+            $empleado->apellidos = $request->apellidoEA;
+            $empleado->celular = $request->celularEA; 
+            $empleado->direccion = $request->direccionEA;            
+            $empleado->correo = $request->correoEA;
+            $empleado->clave = $request->claveEA;
             return back();
         }
         else
         {
-            return back();
+            $empleado=empleado::where('cedula','=',0)->get();
+            return view('actualizacione', compact('empleado'));    
         }
     }
+
+    public function cact(request $request)
+    {
+        $cedula=request('cedula');
+        
+        if($cedula)
+        {
+            $validar=empleado::where('cedula','=',$cedula)->exists();
+            if($validar)
+            {
+                $empleado=empleado::where('cedula','=',$cedula)->get();
+                return view('actualizacione', compact('empleado'));
+            }
+            else
+            {
+                $empleado=empleado::where('cedula','=',0)->get();
+                return view('actualizacione', compact('empleado'));    
+            }         
+        }
+        else
+        {
+            $empleado=empleado::where('cedula','=',0)->get();
+            return view('actualizacione', compact('empleado'));
+        }
+    }
+
     public function desactivar(){
         $cedula=request('cedulaDE');
         $empe= empleado::where('cedula','=',$cedula)->first();

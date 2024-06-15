@@ -12,6 +12,8 @@ Route::get('/', function () {
     return view('index');
 })->name('inicio');
 
+Route::get('contactenos',function(){return view('contactenos');});
+
 Route::get('administrador', function (){
     return view('administrador');
 } );
@@ -29,9 +31,8 @@ route::get('registroe',function(){
 
 route::get('consultae', [EmpleadoController::class,'consultar']);
 
-route::get('actualizacione', function (){
-    return view('actualizacione');
-});
+route::get('actualizacione', [EmpleadoController::class,'cact']);
+
 route::get('borrare', function (){
     return view('borrare');
 });
@@ -43,9 +44,7 @@ route::get('registroc', function (){
 });
 route::get('consultac', [ClienteController::class,'consultarc']);
 
-route::get('actualizacionc', function (){
-    return view('actualizacionc');
-});
+route::get('actualizacionc', [ClienteController::class,'ccli']);
 route::get('borrarc', function (){
     return view('borrarc');
 });
@@ -58,9 +57,7 @@ route::get('registros', function (){
 
 route::get('consultas', [ServiciosController::class, 'consultars']);
 
-route::get('actualizacions', function (){
-    return view('actualizacions');
-});
+route::get('actualizacions',[ServiciosController::class,'cser']);
 route::get('borrars', function (){
     return view('borrars');
 });
