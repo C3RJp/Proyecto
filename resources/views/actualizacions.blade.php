@@ -34,8 +34,8 @@
         <div class="col-12">
             <label for="validationDefault02" class="form-label">Activar</label>
             <select class="form-select" aria-label="Default select example" name="activo">
-                <option selected value=0>Activo</option>
-                <option value=1>Desactivar</option>                        
+                <option selected value= 1>Activo</option>
+                <option value=0>Desactivar</option>                        
             </select>
         </div>
     </div>

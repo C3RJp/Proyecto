@@ -22,9 +22,7 @@
                       <label for="validationDefault03" class="form-label">Cedula De Cliente</label>
                       <input type="number" min="0" class="form-control" id="validationDefault03" name="CedulaCliente" required>
                     </div>
-                </div>
-
-                  </div>
+                </div>                  
 
                   <div class="row">
                     <div class="col-12">

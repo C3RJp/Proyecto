@@ -23,17 +23,17 @@ class ServiciosController extends Controller
     
 
     public function consultars(){
-        $numContraro=request('numeroContrato');
+        $numContraro=request('cedulaCliente');
         $servicios = servicio::paginate('10');
-        $servicio = servicio::where('id','=',$numContraro)->get();
+        $servicio = servicio::where('cedulaCliente','=',$numContraro)->get();
         return view('consultas', compact('servicios','servicio'));
     }
 
     public function consultasc()
     {    
         $cedulac=request('cedula');
-        $numContraro=request('numeroContrato');        
-        $scliente=servicio::where([['id','=',$numContraro],['cedulaCliente','=',$cedulac],])->exists();
+        $numContraro=request('cedulacliente');        
+        $scliente=servicio::where([['cedulaCliente','=',$numContraro],['cedulaCliente','=',$cedulac],])->exists();
         if($scliente)
         {
             $scliente=servicio::where([['id','=',$numContraro],['cedulaCliente','=',$cedulac],])->get();

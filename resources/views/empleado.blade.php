@@ -64,14 +64,12 @@
                     <label class="btn btn-outline-dark" for="vbtn-radio5">Registrar Servicios</label>
                     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio6" autocomplete="off" onclick="boton5()">
                     <label class="btn btn-outline-dark" for="vbtn-radio6">Consulta Servicios</label>
-
-                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio9" autocomplete="off" onclick="boton8()">
-                    <label class="btn btn-outline-dark" for="vbtn-radio9">Consulta Facturas</label>
-
                     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio7" autocomplete="off" onclick="boton6()">
                     <label class="btn btn-outline-dark" for="vbtn-radio7">Actualizar Servicios</label>
                     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio8" autocomplete="off" onclick="boton7()">
                     <label class="btn btn-outline-dark" for="vbtn-radio8">Desactivar Servicios</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio9" autocomplete="off" onclick="boton8()">
+                    <label class="btn btn-outline-dark" for="vbtn-radio9">Consulta Facturas</label>
                     </div>
 
                 </div>
@@ -114,7 +112,7 @@
 </div>
 </main>
 
-<footer>
+<footer class="mt-5">
     <nav class="navbar fixed-bottom bg-transparent">
         <div class="container-fluid fluid-content-end">
             <a class="navbar-brand " href="#">Copy Right ©</a>

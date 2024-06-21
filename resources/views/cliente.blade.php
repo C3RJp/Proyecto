@@ -58,6 +58,9 @@
         </div>
     </div>
 </div>
+<div class="w-100 h-300 bg-transparent">
+    Hola
+</div>
 </main>
 
 <footer>
