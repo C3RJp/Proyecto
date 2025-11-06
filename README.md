@@ -1,5 +1,5 @@
-# Instrucciones 
-## Instalar composer -> composer i
-## Cambiar el nombre del archivo .env.example ->.env
-## Ejecutar las migraciones -> php artisan migrate 
-## Ejecutar las semillas -> php artisan db:seed
+# Instructions 
+## Install composer --> composer i
+## change filename -->(.env.example ->.env)
+## migrarion run --> php artisan migrate 
+## seeders run --> php artisan db:seed
